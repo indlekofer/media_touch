@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+* peer dependencies removed
+
 ## 1.0.1 (2021-04-09)
 
 * dependencies updated

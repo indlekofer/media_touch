@@ -31,9 +31,6 @@
   "dependencies": {
     "@indlekofer/media": "^1.2.4"
   },
-  "peerDepenendencies": {
-    "@indlekofer/redux-store": "^1.x"
-  },
   "files": [
     "cjs/"
   ]
