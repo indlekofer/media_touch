@@ -1,6 +1,6 @@
 import { handleChange, REDUCER } from '@indlekofer/media';
 
-const GET_TOUCH = '@indlekofer/media_touch/ET_TOUCH';
+const GET_TOUCH = '@indlekofer/media_touch/GET_TOUCH';
 
 export const config = (touch = false) => {
   handleChange(GET_TOUCH, touch);
@@ -8,7 +8,7 @@ export const config = (touch = false) => {
 
 export const setup = () => {
   try {
-    document.createEvent("TouchEvent");
+    document.createEvent('TouchEvent');
     config(true);
   } catch(e) {
     config(false);

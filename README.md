@@ -5,11 +5,7 @@
 ```js
 import GET_TOUCH, { REDUCER as MEDIA_REDUCER } from '@indlekofer/media_touch';
 
-const mapStateToProps = (state) => {
-  return {
-    mediaTouch: state[MEDIA_REDUCER].get(GET_TOUCH)
-  }
-}
+const isTouch = useSelector(state => state[MEDIA_REDUCER].get(GET_TOUCH)); //isTouch -> true|false
 
 ```
 

@@ -13,7 +13,7 @@ exports["default"] = exports.GET_TOUCH = exports.unset = exports.setup = exports
 
 var _media = require("@indlekofer/media");
 
-var GET_TOUCH = '@indlekofer/media_touch/ET_TOUCH';
+var GET_TOUCH = '@indlekofer/media_touch/GET_TOUCH';
 exports.GET_TOUCH = GET_TOUCH;
 
 var config = function config() {
