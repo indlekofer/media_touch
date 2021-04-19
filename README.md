@@ -11,6 +11,8 @@ const isTouch = useSelector(state => state[MEDIA_REDUCER].get(GET_TOUCH)); //isT
 
 ## Function exports
 
+### init
+
 ### setup
 
 ### unset

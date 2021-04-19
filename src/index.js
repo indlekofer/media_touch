@@ -1,12 +1,8 @@
 import { handleChange, REDUCER } from '@indlekofer/media';
 
-const GET_TOUCH = '@indlekofer/media_touch/GET_TOUCH';
+export const GET_TOUCH = '@indlekofer/media_touch/GET_TOUCH';
 
-export const config = (touch = false) => {
-  handleChange(GET_TOUCH, touch);
-};
-
-export const setup = () => {
+export const init = () => {
   try {
     document.createEvent('TouchEvent');
     config(true);
@@ -15,15 +11,21 @@ export const setup = () => {
   }
 };
 
-export const unset = () => {
+export const config = (touch) => {
+  handleChange(GET_TOUCH, touch);
+};
 
+export const setup = () => {
+  init();
+};
+
+export const unset = () => {
 };
 
 setup();
 
 export {
-  REDUCER,
-  GET_TOUCH
+  REDUCER
 };
 
 export default GET_TOUCH;

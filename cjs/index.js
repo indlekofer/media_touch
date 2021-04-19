@@ -9,27 +9,32 @@ Object.defineProperty(exports, "REDUCER", {
     return _media.REDUCER;
   }
 });
-exports["default"] = exports.GET_TOUCH = exports.unset = exports.setup = exports.config = void 0;
+exports["default"] = exports.unset = exports.setup = exports.config = exports.init = exports.GET_TOUCH = void 0;
 
 var _media = require("@indlekofer/media");
 
 var GET_TOUCH = '@indlekofer/media_touch/GET_TOUCH';
 exports.GET_TOUCH = GET_TOUCH;
 
-var config = function config() {
-  var touch = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+var init = function init() {
+  try {
+    document.createEvent('TouchEvent');
+    config(true);
+  } catch (e) {
+    config(false);
+  }
+};
+
+exports.init = init;
+
+var config = function config(touch) {
   (0, _media.handleChange)(GET_TOUCH, touch);
 };
 
 exports.config = config;
 
 var setup = function setup() {
-  try {
-    document.createEvent("TouchEvent");
-    config(true);
-  } catch (e) {
-    config(false);
-  }
+  init();
 };
 
 exports.setup = setup;
